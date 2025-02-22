@@ -1,0 +1,469 @@
+/* Reset y estilos generales */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+/* Barra de navegación */
+.contenedor-navegacion {
+    background-color: rgba(0, 0, 0, 0.8); 
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.navegacion-principal {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem ;
+}
+
+.navegacion-principal a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 0;
+    transition: color 0.3s ease;
+}
+
+.navegacion-principal a:hover {
+    color: #2997ff; 
+}
+
+
+/* Sección principal */
+.principal {
+    margin-top: 60px; /* Ajuste para la barra de navegación */
+}
+
+
+.hero1 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: black;
+    border-radius: 35px;
+}
+
+.hero2 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(180deg, #0F1733 0%, #3F5BA9 50%, #F2F2F7 100%);
+    border-radius: 35px;
+  margin-top: 10px;
+}
+
+
+ .hero3 {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 35px;
+    margin-top: 10px;
+    background-color: #f1f2f0;
+}
+/* Estilos para las imágenes */
+.hero-image {
+    position: absolute;
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centro */
+    width: 70%; /* Ocupa el 70% del ancho de la pantalla */
+    height: 70%; /* Ocupa el 70% del alto de la pantalla */
+    object-fit: cover; /* Cubre el espacio sin distorsionar */
+    z-index: 1; /* Coloca la imagen detrás del contenido */
+}
+
+/* Estilos para el contenido */
+.hero-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    z-index: 2;
+    color: white; 
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Usa una fuente moderna */
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    font-weight: bold; 
+    margin-bottom: 0.5rem; /* Reduce el margen inferior */
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem; /* Más separación con los botones */
+    margin: 0;
+    padding: 0%;
+    font-size: 2.5rem;
+}
+
+.hero-content3 h1 {
+    font-size: 6rem;
+    font-weight: bold; 
+    margin-bottom: 0.5rem; /* Reduce el margen inferior */
+    margin: 0;
+    padding: 0%;
+}
+
+.hero-content3 h2 {
+ 
+    font-weight: 400;
+    font-weight: bold; 
+    margin-bottom: 1.5rem; /* separación con los botones */
+    margin: 0;
+    padding: 0%;
+    font-size: 2.5rem;
+}
+.hero-content3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+    z-index: 2;
+    color: black;
+    text-align: center;
+    font-family: 'Arial', sans-serif; 
+
+}
+
+
+/* Estilos para los botones en general */
+.hero-buttons {
+    margin-top: 2rem;
+}
+
+.hero-buttons button {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.8rem 1.5rem;
+    border-radius: 9px;
+    text-align: center;
+    margin: 0 1rem;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+.hero-buttons button:not(.botoncomprar) {
+    background-color: transparent; 
+    color: white; 
+    border: 2px solid white; 
+}
+
+/*  botón Learn more */
+.hero-buttons button:not(.botoncomprar):hover {
+    background-color: white; 
+    color: #0071e3; 
+}
+
+/* Estilos para el botón Buy */
+.botoncomprar {
+    background-color: white; 
+    color: #0071e3; 
+    border: 2px solid white; /
+}
+
+/* Efecto hover para el botón Buy */
+.botoncomprar:hover {
+    background-color:white; 
+    border-color: #005bb5; 
+}
+
+
+
+/*-----------------------------------------------------------------*/
+/*PRODUCTOS*/
+
+
+/* Diseño del contenedor principal -  columnas de los productos  */
+.listado-productos {
+    display:flex ;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 3rem;
+    row-gap: 3rem;
+    padding: 2rem ;
+}
+
+/* Estilo de cada producto */
+.producto-item {
+    background-color: #f1f2f0;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.producto-item:hover {
+    transform: scale(1.02);
+}
+
+/* Edicion de los productos en las tarjetas*/
+.producto-item img {
+    max-width: 100%;
+    height: 60%;
+    display: block;
+    margin: 0 auto 1rem;
+    border-radius: 7%;
+}
+
+/* Texto dentro de cada producto */
+.producto-texto {
+    text-align: center;
+    color: #333;
+    padding: 1rem;
+}
+
+.producto-texto h1 {
+    font-size: 4rem;
+    color: black;
+}
+
+.producto-texto p {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #060303;
+}
+
+.producto-texto h3 {
+    font-size: 2.3rem;
+    color: #070606;
+    margin-top: 2rem;
+}
+
+/* Botones */
+.btn-primario, .btn-secundario {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.8rem 1.5rem;
+    border-radius: 9px;
+    text-align: center;
+    margin: 1rem;
+    transition: background 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+/* boton de color BUY*/
+.btn-primario {
+    background-color: #0071e3;
+    color: white;
+}
+
+.btn-primario:hover {
+    background-color: #005bb5;
+}
+
+/* Boton transparente  */
+.btn-secundario {
+    background-color: transparent;
+    color: #0071e3;
+    border: 2px solid #0071e3;
+}
+
+.btn-secundario:hover {
+    background-color: #0071e3;
+    color: white;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*Carrusel*/
+
+.carrusel {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 3rem;
+}
+
+.imagenes {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+ 
+}
+
+.imagenes img {
+  width: 110rem;
+  height: 90rem;
+  margin-right: 15px;
+  border-radius: 5%;
+}
+
+/*------------------------------------------------------------------------------------*/
+/*Carrusel2*/
+
+.carrusel2 {
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 3rem;
+  
+}
+
+.imagenes2 {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.imagenes2 img {
+  width: 100rem;
+  height: 40rem;
+  margin-right: 15px;
+  border-radius: 5%;
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------- */
+/* Footer */
+
+.site-footer {
+    border-top: 0.2rem solid gray; 
+    margin-top: 0rem;    
+    padding-top: 0rem;   
+}
+
+
+.grid-footer {
+    display: grid ;   /* Activa el sistema de grid */
+    grid-template-columns: repeat(5, 3fr);   
+    column-gap: 5px;    /*espacio entre columnas */
+    padding: 1rem; 
+}
+
+.footer-menu a {
+    display: block;  /* Hace que cada enlace ocupe su propia línea */
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: gray;
+    font-size: 15px;
+
+    line-height: 1.3; /* Ajusta el espaciado entre líneas */
+}
+
+.grid-footer h3 {
+    margin-bottom: 1rem;  /* Agrega espacio debajo de cada título */
+     font-size: 1.8rem; /* Tamaño de fuente igual que los enlaces */
+}
+
+/* Estilo para el párrafo de More ways to shop */
+.grid-footer p {
+    grid-column: 1 / -1; /* Hace que ocupe todas las columnas */
+    font-size: 12px;
+    margin-top: 1rem;
+}
+
+
+
+/*--------------------------------------------------------------------------------*/
+/* Copyright*/
+
+
+/*.site-footer2 {
+border-top: 0.2rem solid purple;
+margin-top: 2rem;
+padding-top: 1rem;
+display: flex;
+justify-content:center;
+align-items: center;
+gap: 3rem;
+}*/
+
+.copyright{
+font-size: 12px;
+margin: 0;
+padding-left: 16px;
+}
+.site-footer2 {
+    border-top: 0.2rem solid gray;
+  
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 3rem;
+}
+
+.site-footer2 section {
+    display: grid;
+    gap: 20px;
+   padding-right: 16px;
+}
+
+
+.site-footer2 section a{
+    text-decoration: none;
+    color: gray;
+    font-size: 14px;
+}
+
+
+.site-footer2 section a:hover {
+    text-decoration: underline;
+}
+
+.site-footer2 section a:not(:last-child)::after {
+    content: '|';
+    margin-left: 14px;
+    color: #d2d2d7;
+}
+
+
+/* Sección completa del footer */
+.piedeP {
+    max-width: 145rem;
+    margin: 0  auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+   border: solid 5px rgb(165, 167, 163);
+   border-radius: 2%;
+}
+
+.piedeP p{
+    color: gray;
+    font-size: 15px;
+}
